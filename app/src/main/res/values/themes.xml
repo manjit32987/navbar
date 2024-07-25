@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Fitraho" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/levender</item>
+        <item name="colorOutlineVariant">@color/levender</item>
+    </style>
+
+    <style name="Theme.Fitraho" parent="Base.Theme.Fitraho" />
+</resources>

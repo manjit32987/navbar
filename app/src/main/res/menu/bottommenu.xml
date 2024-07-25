@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/screentime"
+    android:title="Focus"
+    android:icon="@drawable/baseline_av_timer_24"/>
+   <item
+       android:id="@+id/water"
+       android:title="Water"
+       android:icon="@drawable/baseline_task_alt_24"/>
+    <item
+        android:id="@+id/home"
+        android:title=""
+        android:enabled="false"/>
+    <item
+        android:id="@+id/Excercise"
+        android:title="Excercise"
+        android:icon="@drawable/baseline_task_24"/>
+    <item
+        android:id="@+id/Diet"
+        android:title="Diet"
+        android:icon="@drawable/baseline_task_24"/>
+</menu>
