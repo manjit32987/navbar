@@ -12,12 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fitraho"
         tools:targetApi="31">
+
+        <!-- Declare NameInputActivity -->
+        <activity
+            android:name=".NameInputActivity"
+            android:exported="true" />
+
+        <!-- Main Activity with intent filter -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
