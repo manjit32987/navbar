@@ -1,18 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/levender"
-    tools:context=".diet">
+    android:background="@drawable/drinkwatermine"
+    tools:context=".waterdrink">
 
-    <!-- TODO: Update blank fragment layout -->
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+        android:id="@+id/circularProgressBar"
+        android:layout_width="220dp"
+        android:layout_height="230dp"
+        android:layout_marginTop="32dp"
+        app:cpb_background_progressbar_color="#b6bbd8"
+        app:cpb_background_progressbar_width="15dp"
+        app:cpb_progress_direction="to_right"
+        app:cpb_progressbar_color="#00E5FF"
+        app:cpb_progressbar_width="20dp"
+        app:cpb_round_border="true"
+        app:cpb_start_angle="270"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="water"
+        android:id="@+id/tv_waterIntake"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center"
-        android:textSize="50dp"
-        android:textColor="@color/white"
-        />
-</FrameLayout>
+        android:text="0 ml"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/circularProgressBar"
+        app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"
+        app:layout_constraintStart_toStartOf="@id/circularProgressBar"
+        app:layout_constraintTop_toTopOf="@id/circularProgressBar" />
+
+    <Button
+        android:id="@+id/btn_addWater"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/circular_button"
+        android:text="+"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_waterIntake" />
+
+    <ListView
+        android:id="@+id/lv_waterIntakeHistory"
+        android:layout_width="384dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_addWater"
+        app:layout_constraintVertical_bias="0.367" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
