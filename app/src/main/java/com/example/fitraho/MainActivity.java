@@ -14,7 +14,7 @@ import com.example.fitraho.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    ActivityMainBinding binding;
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +37,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Load the default fragment
-        replaceFragment(new home());
+        replaceFragment(new screentime()); // Make sure to use the correct fragment class name
 
         // Set up bottom navigation item selection listener
         binding.bottomnavigation.setOnItemSelectedListener(item -> {
-            int itemId = item.getItemId();
             Fragment selectedFragment = null;
+            int itemId = item.getItemId();
+
             if (itemId == R.id.user) {
                 selectedFragment = new home();
             } else if (itemId == R.id.screentime) {
@@ -60,6 +61,14 @@ public class MainActivity extends AppCompatActivity {
             }
             return true;
         });
+
+        Intent intent = getIntent();
+        if (intent != null && intent.hasExtra("SELECTED_MENU_ITEM")) {
+            int selectedItemId = intent.getIntExtra("SELECTED_MENU_ITEM", -1);
+            if (selectedItemId != -1) {
+                binding.bottomnavigation.setSelectedItemId(selectedItemId);
+            }
+        }
     }
 
     private void replaceFragment(Fragment fragment) {
