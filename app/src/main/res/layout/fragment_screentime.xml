@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/e97df14033f5f1ca346440b5f0b4255b"
+    android:background="@drawable/gradientback"
     android:padding="50dp">
 
     <TextView
@@ -42,8 +42,8 @@
 
         android:layout_below="@+id/remainingTimeTextView"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="193dp"
         android:text="Set Screen Time Goal" />
 
 </RelativeLayout>

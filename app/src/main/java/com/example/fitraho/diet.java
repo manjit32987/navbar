@@ -1,10 +1,13 @@
 package com.example.fitraho;
 
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 public class diet extends Fragment {
 
@@ -14,7 +17,15 @@ public class diet extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_diet, container, false);
 
-        // Initialize UI components and setup listeners if needed
+        ImageView weightgain = view.findViewById(R.id.skiny);
+
+        weightgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(),vegnonveg.class);
+                startActivity(i);
+            }
+        });
 
         return view; // Corrected to return the inflated view
     }

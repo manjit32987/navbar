@@ -18,6 +18,25 @@ public class excercise extends Fragment {
 
         ImageView bmi = view.findViewById(R.id.imgBMI);
         ImageView sensor = view.findViewById(R.id.imgPEDO);
+        ImageView tipscall = view.findViewById(R.id.tips147);
+        ImageView yogacall = view.findViewById(R.id.yoga);
+
+        yogacall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent j = new Intent(getActivity(),YogaListActivity    .class);
+                startActivity(j);
+            }
+        });
+
+        tipscall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(),NonVegActivity.class);
+                startActivity(i);
+            }
+        });
+
 
         bmi.setOnClickListener(new View.OnClickListener() {
             @Override
